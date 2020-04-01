@@ -2,7 +2,7 @@ import React,{useState,useCallback} from 'react'
 import {MdAdd} from 'react-icons/md'
 import './TodoInsert.scss'
 
-const TodoInsert = () =>{
+const TodoInsert = ({onInsert}) =>{
     const [value,setValue]=useState('');
     const onChange=useCallback(e=>{
         setValue(e.target.value);  //컴포넌트가 처음 렌더링 될때만 함수 생성
